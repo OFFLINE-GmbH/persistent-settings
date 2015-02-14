@@ -1,5 +1,5 @@
 {
-  "name": "offline/settings",
+  "name": "offline/persistent-settings",
   "description": "Persistent Settings Manager for Laravel 5",
   "keywords": [
     "registry",
