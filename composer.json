@@ -5,7 +5,10 @@
     "registry",
     "laravel",
     "settings",
-    "persistent"
+    "persistent",
+    "laravel 5",
+    "settings management",
+    "key/value"
   ],
   "license": "MIT",
   "authors": [

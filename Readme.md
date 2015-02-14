@@ -8,7 +8,7 @@ Database and cached in a json file to minimize database queries.
 To install this package include it in your `composer.json` and run `composer update`:
 
     "require": {
-       "offline/persistent-settings": "dev-master"
+       "offline/persistent-settings": "~1.0.0"
     }
      
 Add the Service Provider to the `provider` array in your `config/app.php`
