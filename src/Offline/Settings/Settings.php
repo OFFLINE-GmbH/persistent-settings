@@ -72,7 +72,7 @@ class Settings
 
         $row = $this->database->table($this->config['db_table'])->where('key', $key)->first(['value']);
 
-        return (count($row) > 0) ? $this->cache->set($key, unserialize($row['value'])) : null;
+        return (!is_null($row)) ? $this->cache->set($key, unserialize($row->value)) : null;
     }
 
 
@@ -105,13 +105,14 @@ class Settings
     {
         $value = serialize($value);
 
-        $setting = $this->database->table($this->config['db_table'])->first(['key' => $key]);
+        $setting = $this->database->table($this->config['db_table'])->where('key', $key)->first();
 
         if (is_null($setting)) {
             $this->database->table($this->config['db_table'])
                            ->insert(['key' => $key, 'value' => $value]);
         } else {
             $this->database->table($this->config['db_table'])
+                           ->where('key', $key)
                            ->update(['value' => $value]);
         }
 
