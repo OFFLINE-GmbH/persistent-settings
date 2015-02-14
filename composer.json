@@ -8,7 +8,7 @@
     "persistent",
     "laravel 5",
     "settings management",
-    "key/value"
+    "key-value"
   ],
   "license": "MIT",
   "authors": [
