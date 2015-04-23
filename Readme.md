@@ -1,4 +1,5 @@
 # Persistent Settings Manager for Laravel 5
+[![Build Status](https://travis-ci.org/OFFLINE-GmbH/persistent-settings.svg)](https://travis-ci.org/OFFLINE-GmbH/persistent-settings)
 
 This package makes it easy to store persistent key/value settings in your Laravel 5 application. All settings are 
 stored in your database and cached in a json file to minimize database queries.
