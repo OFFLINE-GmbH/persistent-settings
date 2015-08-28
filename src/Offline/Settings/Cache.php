@@ -84,6 +84,9 @@ class Cache
     public function getAll()
     {
         $values = json_decode(file_get_contents($this->cacheFile), true);
+
+        if( ! is_array($values)) return [];
+        
         foreach ($values as $key => $value) {
             $values[$key] = unserialize($value);
         }
